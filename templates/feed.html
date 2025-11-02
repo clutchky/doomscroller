@@ -7,7 +7,8 @@
   </head>
   <body>
     {% for item in files %}
-    <li><a href="{{ item.path }}">{{ item.name }}</a></li>
+    <h3>{{item.name}}</h3>
+    <p>{{item.content}}</p>
     {% endfor %}
   </body>
 </html>

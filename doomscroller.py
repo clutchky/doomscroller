@@ -7,7 +7,9 @@ md_files = scandir("D:/PKM/0_inbox")
 feed_list = []
 
 for i in md_files:
-    feed_list.append(i)
+    with open(i.path, encoding="utf-8") as f:
+        read_data = f.read()
+        feed_list.append({ "name": i.name, "path": i.path, "content": read_data})
 
 @app.route("/")
 def hello_world():

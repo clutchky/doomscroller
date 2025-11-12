@@ -14,7 +14,7 @@ for i in md_files:
         read_data = f.read()
         html_content = markdown.markdown(read_data, extensions=['fenced_code','codehilite', 'tables'])
         feed_list.append({
-            "name": i.name, 
+            "name": i.name.rsplit('.', 1)[0], 
             "path": i.path, 
             "content": read_data,
             "html_content": html_content})
@@ -26,3 +26,6 @@ def hello_world():
 @app.route("/feed")
 def feed():
     return render_template("feed.html", files=feed_list)
+
+
+if __name__ == '__main__': app.run()

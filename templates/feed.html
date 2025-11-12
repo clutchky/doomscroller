@@ -8,7 +8,6 @@
   <body>
     {% for item in files %}
     <h3>{{item.name}}</h3>
-    <p>{{item.content}}</p>
-    {% endfor %}
+    {{item.html_content|safe}} {% endfor %}
   </body>
 </html>

@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Feed</title>
-  </head>
-  <body>
-    {% for item in files %}
-    <h3>{{item.name}}</h3>
+{% extends "base.html" %} {% block content %} {% for item in files %}
+<section class="section">
+  <div class="container">
+    <h3 class="section__title">{{item.name}}</h3>
     {{item.html_content|safe}} {% endfor %}
-  </body>
-</html>
+  </div>
+</section>
+{% endblock %}

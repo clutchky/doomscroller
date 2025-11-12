@@ -1,0 +1,91 @@
+/* GOOGLE FONTS */
+/* CSS Variables */
+:root {
+  /* Colors */
+  --primary-color: hsl(218, 94%, 45%);
+  /* Fonts and typography */
+  --body-font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /*.5rem = 8px | 1rem = 16px ...*/
+  /* Font weights */
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  /* z-index */
+  --z-fixed: 100;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
+}
+
+/* Breakpoint for font size */
+/* Dark Theme (if any) variables */
+/* Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: var(--font-semi-bold);
+  color: var(--primary-color);
+}
+
+/* Reusable CSS Classes */
+.container {
+  max-width: 1120px;
+  margin-inline: 1.5rem;
+}
+
+.section {
+  padding-block: 5rem 1rem;
+}
+
+/* Header and nav */
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: white;
+  z-index: var(--z-fixed);
+}
+
+/*FEED*/
+.section__title {
+  font-size: 1.5rem;
+}
+
+/*CODEBLOCKS*/
+.codehilite {
+  background: black;
+  color: white;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+/* Breakpoints */
+@media screen and (min-width: 1185px) {
+  .container {
+    margin-inline: auto;
+  }
+}
